@@ -30,73 +30,35 @@ using namespace std;
 //1.display all employees salary 2. calculate the total salary of the employees
 // 3.find the highest salary employeed 4.count how many employees have salary greater than 50000
 //5.calculate the average salary
-// int main(){
-//     int n;
-//     cout<<"Enter no. of employess: ";
-//     cin>>n;
-//     vector<double>emp(n);
-//     cout<<"Enter salaries: ";
-//     for(int i=0;i<n;i++){
-//         cin>>emp[i];
-//     }
-//     cout<<endl;
-//     cout<<"Salary of employees: ";
-//     double total=0;
-//     int count=0;
-//     for(auto s:emp){
-//         cout<<s<<" ";
-//         total+=s;
-//         if(s>50000.00){
-//             count++;
-//         }
-//     }
-//     cout<<endl;
-//     cout<<"Highest salary: "<<*max_element(emp.begin(),emp.end())<<endl;
-//     cout<<"Employees having salary greater than 50 thousand are: "<<count<<endl;
-//     cout<<"Average salary: "<<total/n;
-//     return 0;
-// }
+int main(){
+    int n;
+    cout<<"Enter no. of employess: ";
+    cin>>n;
+    vector<double>emp(n);
+    cout<<"Enter salaries: ";
+    for(int i=0;i<n;i++){
+        cin>>emp[i];
+    }
+    cout<<endl;
+    cout<<"Salary of employees: ";
+    double total=0;
+    int count=0;
+    for(auto s:emp){
+        cout<<s<<" ";
+        total+=s;
+        // if(s>50000.00){
+        //     count++;
+        // }
+    }
+    cout<<endl;
+    // cout<<"Highest salary: "<<*max_element(emp.begin(),emp.end())<<endl;
+    // cout<<"Employees having salary greater than 50 thousand are: "<<count<<endl;
+    cout<<"Average salary: "<<total/n;
+    return 0;
+}
 
 // design a class represents tp bank account with proper data handling and the member functions for deposit 
 //withdrawl ans show balance operations
-class bankaccount{
-    private:
-    float balance;
-    public:
-    void setamount(float b){
-        balance=b;
-    }
-    void deposit(float b){
-        balance+=b;
-        cout<<"Deposited"<<endl;
-    }
-    void withdraw(float b){
-        if(balance>=b){
-            cout<<"Withdrawn: "<<b<<endl;
-            balance-=b;
-        }
-        else{
-            cout<<"NOT sufficient balance to withdraw"<<endl;
-        }
-    }
-    void show(){
-        cout<<" Current Balance: "<<balance;
-    }
 
-};
-int main(){
-    bankaccount b;
-    float n,w,s;
-    cout<<"enter initial amount: ";
-    cin>>s;
-    b.setamount(s);
-    cout<<"enter amount to deposit: ";
-    cin>>n;
-    b.deposit(n);
-    cout<<"Enter amount to withraw: ";
-    cin>>w;
-    b.withdraw(w);
-    b.show();
-}
 
 
